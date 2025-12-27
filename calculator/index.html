@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="calculator-container">
+        <!-- Theme Toggle Button -->
+        <div class="theme-toggle">
+            <button id="themeBtn" class="theme-btn light-theme">🌞</button>
+        </div>
+
+        <div class="calculator-card">
+            <div class="display" id="display">
+                <div id="input" class="input"></div>
+                <div id="result" class="result">0</div>
+            </div>
+            <div class="buttons">
+                <!-- Row 1 -->
+                <button class="btn operator" data-value="C">C</button>
+                <button class="btn operator" data-value="←">←</button>
+                <button class="btn operator" data-value="÷">÷</button>
+                <button class="btn operator" data-value="×">×</button>
+
+                <!-- Row 2 -->
+                <button class="btn number" data-value="7">7</button>
+                <button class="btn number" data-value="8">8</button>
+                <button class="btn number" data-value="9">9</button>
+                <button class="btn operator" data-value="−">−</button>
+
+                <!-- Row 3 -->
+                <button class="btn number" data-value="4">4</button>
+                <button class="btn number" data-value="5">5</button>
+                <button class="btn number" data-value="6">6</button>
+                <button class="btn operator" data-value="+">+</button>
+
+                <!-- Row 4 -->
+                <button class="btn number" data-value="1">1</button>
+                <button class="btn number" data-value="2">2</button>
+                <button class="btn number" data-value="3">3</button>
+                <button class="btn equals" data-value="=">=</button>
+
+                <!-- Row 5 -->
+                <button class="btn number" data-value="0">0</button>
+                <button class="btn number" data-value=".">.</button>
+                <button class="btn utility" id="historyBtn">📜</button>
+                <button class="btn utility" id="convertBtn">🔄</button>
+            </div>
+        </div>
+
+        <!-- Conversion Panel -->
+<div class="panel" id="conversionPanel">
+    <div class="panel-header">
+        <h3>Unit Converter</h3>
+    </div>
+    
+    <div class="converter-grid">
+        <select id="unitType" class="input-field full-width">
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+            <option value="currency">Currency</option>
+        </select>
+
+        <input type="number" id="convertValue" class="input-field full-width" placeholder="Enter value">
+
+        <div class="conversion-row">
+            <select id="fromUnit" class="input-field"></select>
+            
+            <button id="swapUnits" class="icon-btn" title="Swap Units">
+                ⇄
+            </button>
+            
+            <select id="toUnit" class="input-field"></select>
+        </div>
+
+        <button id="doConvert" class="action-btn">Convert</button>
+        <div id="convertResult" class="result-box">Result will appear here</div>
+    </div>
+</div>
+
+<div class="panel" id="historyPanel">
+    <div class="panel-header">
+        <h3>History</h3>
+        <button id="clearHistory" class="clear-btn">Clear All</button>
+    </div>
+    
+    <div class="history-scroll-area">
+        <ul id="historyList">
+            </ul>
+    </div>
+</div>
+
+        <footer>
+            <p>Calculator Project – No API required</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
